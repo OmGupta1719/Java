@@ -11,12 +11,13 @@
 //MAIN METHOD FOR TEST CASES:
 
 public static void main(String[] args) {
+      //test case for number being zero
       int zero = 0;
       checkNumber(zero);
-      
+      //test case for number being positive
       int positive = 25;
       checkNumber(positive);
-
+      //test case for number being negative
       int negative = -25;
       checkNumber(negative);
 }
