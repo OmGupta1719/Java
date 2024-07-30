@@ -1,49 +1,37 @@
-Write a class with the name Person. The class needs three fields (instance variables) with the names firstName, lastName of type String and age of type int.
+Write a class with the name Wall. The class needs two fields (instance variables) with name width and height of type double.
+
+The class needs to have two constructors:
+The first constructor does not have any parameters (no-args constructor).
+The second constructor has parameters width and height of type double and it needs to initialize the fields.
+In case the width parameter is less than 0 it needs to set the width field value to 0.
+In case the height parameter is less than 0 it needs to set the height field value to 0.
 
 Write the following methods (instance methods):
-Method named getFirstName without any parameters, it needs to return the value of the firstName field.
+Method named getWidth without any parameters, it needs to return the value of width field.
 
-Method named getLastName without any parameters, it needs to return the value of the lastName field.
+Method named getHeight without any parameters, it needs to return the value of height field.
 
-Method named getAge without any parameters, it needs to return the value of the age field.
+Method named setWidth with one parameter of type double, it needs to set the value of the width field. If the parameter is less than 0 it needs to set the width field value to 0.
 
-Method named setFirstName with one parameter of type String, it needs to set the value of the firstName field.
+Method named setHeight with one parameter of type double, it needs to set the value of the height field. If the parameter is less than 0 it needs to set the height field value to 0.
 
-Method named setLastName with one parameter of type String, it needs to set the value of the lastName field.
-
-Method named setAge with one parameter of type int, it needs to set the value of the age field. If the parameter is less than 0 or greater than 100, it needs to set the age field value to 0.
-
-Method named isTeen without any parameters, it needs to return true if the value of the age field is greater than 12 and less than 20, otherwise, return false.
-
-Method named getFullName without any parameters, it needs to return the full name of the person.
-
-In case both firstName and lastName fields are empty, Strings return an empty String.
-In case lastName is an empty String, return firstName.
-In case firstName is an empty String, return lastName.
-
-To check if s String is empty, use the method isEmpty from the String class. For example, firstName.isEmpty() returns true if the String is empty or in other words, when the String does not contain any characters.
+Method named getArea without any parameters, it needs to return the area of the wall.
 
 TEST EXAMPLE
-TEST CODE:
-Person person = new Person();
-person.setFirstName("");   // firstName is set to empty string
-person.setLastName("");    // lastName is set to empty string
-person.setAge(10);
-System.out.println("fullName= " + person.getFullName());
-System.out.println("teen= " + person.isTeen());
-person.setFirstName("John");    // firstName is set to John
-person.setAge(18);
-System.out.println("fullName= " + person.getFullName());
-System.out.println("teen= " + person.isTeen());
-person.setLastName("Smith");    // lastName is set to Smith
-System.out.println("fullName= " + person.getFullName());
-OUTPUT
-fullName=
-teen= false
-fullName= John
-teen= true
-fullName= John Smith
+→ TEST CODE:
+1 Wall wall = new Wall(5,4);
+2 System.out.println("area= " + wall.getArea());
+3 
+4 wall.setHeight(-1.5);
+5 System.out.println("width= " + wall.getWidth());
+6 System.out.println("height= " + wall.getHeight());
+7 System.out.println("area= " + wall.getArea());
+→ OUTPUT:
+area= 20.0
+width= 5.0
+height= 0.0
+area= 0.0
 
 NOTE: All ​methods should be defined as public NOT public static.
-NOTE: In total, you have to write 8 methods.
-NOTE: Do not add the main method to the solution code.
+NOTE: In total, you have to write 5 methods and 2 constructors.
+NOTE: Do not add a main method to the solution code.
